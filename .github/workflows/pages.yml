@@ -23,40 +23,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Download the original wallpapers
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          from urllib.parse import quote
-          from urllib.request import urlopen
-          names = [
-              'Lake_Como_Estate.png',
-              'Monaco_Ferrari.png',
-              'Porsche_Golf.png',
-              'Porsche_White.png',
-              'Gold-Watch-Fuck-9-5.png',
-              'Who-Cares-Watch-Collage.png',
-              'Child with a cobalt spoon.png',
-              'I need vitamin Cash.png',
-              'Nadal’s Fist with Yellow Tennis Ball.png',
-              'Painted Hand and Pixel Cursor.png',
-              'The world is yours.png',
-              'Red-Supercar.png',
-              'Scarlet Psycho Portrait with Headphones.png',
-              'Super Rich Kids in Orange Impasto.png',
-              'Courtside-Handshake.png',
-              'Impasto Jet Over a Cyan Sky.png',
-              'Impasto matcha in a monogram duffel.png',
-              'Impasto Porsche with Lion Cubs.png',
-              'Impasto tennis on terracotta clay.png'
-          ]
-          folder = Path('assets')
-          folder.mkdir(exist_ok=True)
-          base = 'https://ayaan-nineteen-gallery.ayaan-popatiya101.chatgpt.site/assets/'
-          for name in names:
-              with urlopen(base + quote(name), timeout=60) as response:
-                  (folder / name).write_bytes(response.read())
-          PY
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
