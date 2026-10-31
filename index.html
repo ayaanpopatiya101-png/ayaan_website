@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ede9dc">
+
+  <title>Nineteen for Ayaan</title>
+  <meta name="description" content="A birthday collection and a note from home for Ayaan's nineteenth birthday.">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="entry-guard.js"></script>
+</head>
+
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <main>
+    <!-- Opening screen -->
+    <section class="gate" id="gate">
+      <div class="gate-art" aria-hidden="true">
+        <img src="assets/Lake_Como_Estate.png" alt="">
+        <img src="assets/Monaco_Ferrari.png" alt="">
+        <img src="assets/Porsche_Golf.png" alt="">
+        <img
+          src="assets/Impasto%20tennis%20on%20terracotta%20clay.png"
+          alt=""
+        >
+      </div>
+
+      <div class="gate-top caps">
+        <span>A birthday collection</span>
+        <span>For Ayaan / 19</span>
+      </div>
+
+      <div class="invite">
+        <div class="caps eyebrow">
+          A little something from Azrain
+        </div>
+
+        <h1>
+          <span>Ready for</span>
+          <em>nineteen?</em>
+        </h1>
+
+        <p>
+          A collection made for you, and a note from home.
+        </p>
+
+        <div class="actions" id="actions">
+          <button class="btn yes" id="yes">
+            Yes, let’s go
+          </button>
+
+          <button class="btn no" id="no">
+            No
+          </button>
+        </div>
+
+        <p class="caps hint" id="hint" aria-live="polite"></p>
+      </div>
+
+      <div class="gate-bottom caps">
+        <span>Made with love, from home</span>
+        <span>Take your time</span>
+      </div>
+    </section>
+
+    <!-- Wallpaper gallery -->
+    <section class="gallery hidden" id="gallery">
+      <header>
+        <span class="caps">Azrain presents</span>
+        <span class="caps">Ayaan / Chapter 19</span>
+      </header>
+
+      <div class="hero">
+        <h2>
+          Nineteen<br>
+          <em>for you.</em>
+        </h2>
+
+        <div class="hero-copy">
+          <p>
+            A little gallery for a big year. Pick a favorite and
+            there’s something waiting for you.
+          </p>
+
+          <span class="caps">
+            Scroll to explore &nbsp; ↓
+          </span>
+        </div>
+      </div>
+
+      <div class="collection-intro">
+        <span class="caps">The collection / 01–19</span>
+        <span>Choose a piece to open your letter</span>
+      </div>
+
+      <div class="collection" id="collection"></div>
+
+      <div class="footer caps">
+        <span>Happy 19th, Ayaan</span>
+        <span>With love, Azrain</span>
+      </div>
+
+      <button class="sound caps" id="sound" aria-pressed="false">
+        Sound off
+      </button>
+    </section>
+  </main>
+
+  <!-- Birthday letter -->
+  <div
+    class="overlay hidden"
+    id="overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="letter-title"
+  >
+    <div class="backdrop" id="backdrop"></div>
+
+    <article class="letter">
+      <div class="letter-head caps">
+        <span>A note from home</span>
+
+        <button
+          class="close caps"
+          id="close"
+          aria-label="Close letter"
+        >
+          Close ×
+        </button>
+      </div>
+
+      <h3 id="letter-title">Dear Ayaan,</h3>
+
+      <p>
+        Ever since you left for college, it hasn’t felt any different
+        than before. However, over the past two or three weeks, I’ve
+        started to realize how much value you bring to this house.
+      </p>
+
+      <p>
+        Despite all the arguments with Mom and Dad that you never
+        stopped until you were right, or the times you got mad at me
+        for no reason, I still want you back in the house where you
+        belong.
+      </p>
+
+      <p>
+        Enough about how I’m feeling. I hope you have fun on your
+        birthday with your friends, whether you’re going to Halloween
+        parties or just going to New York for a day or two.
+      </p>
+
+      <p>
+        In addition, I hope you keep having fun at Brown and can
+        hopefully play line 1 on the club tennis team, like you did
+        your senior year, or even become a student manager for the
+        actual D1 team. Who knows?
+      </p>
+
+      <p>
+        Sincerely,<br>
+        <span class="signature">Azrain</span>
+      </p>
+
+      <div class="letter-actions">
+        <a id="download" href="#" download>
+          Download this wallpaper ↓
+        </a>
+
+        <button id="back" class="caps">
+          Back to the gallery
+        </button>
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
